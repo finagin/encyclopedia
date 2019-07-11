@@ -1,0 +1,62 @@
+#!/usr/bin/env php
+<?php
+
+function slugify($text)
+{
+    $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+    $text = trim($text, '-');
+
+    $text = preg_replace('~-+~', '-', $text);
+
+    $text = mb_strtolower($text);
+
+    if (empty($text)) {
+        return 'n-a';
+    }
+
+    return urlencode($text);
+}
+
+function makeHeader($data)
+{
+    $header = '';
+    preg_match_all('/^(##+) (.*)$/m', $data, $matches, PREG_SET_ORDER);
+
+    foreach ($matches as $item) {
+        $header .=
+            str_repeat('  ', strlen($item[1]) - 2).
+            '- ['.$item[2].'](#'.slugify($item[2]).")\n";
+    }
+
+    return "\n".$header."\n";
+}
+
+function build($path, $data = '', $debug = false)
+{
+    foreach (glob($path.'/*.md') as $file) {
+        if ($debug) {
+            $data .= "\n[//]: # ({$file})";
+        }
+        $data .= "\n".file_get_contents($file);
+        $dir = strstr($file, '.md', true);
+
+        if (is_dir($dir)) {
+            $data = call_user_func(__FUNCTION__, $dir, $data, $debug);
+        } else {
+            if (preg_match('/>\s*$/', $data) !== false) {
+                $data .= "\n";
+            }
+            $data .= "[Back to top](#Список-полезных-команд)\n***";
+        }
+    }
+
+    return $data;
+}
+
+$data = build('files', '', $argc > 1);
+
+file_put_contents(
+    __DIR__.DIRECTORY_SEPARATOR.'README.md',
+    '# Список полезных команд'.makeHeader($data).$data
+);
