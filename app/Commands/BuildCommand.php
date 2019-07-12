@@ -109,13 +109,17 @@ class BuildCommand extends Command
     protected function slugify($text)
     {
         if (!array_key_exists($text, $this->slugifyCache)) {
-            $tmp = preg_replace('~[^\pL\d]+~u', '-', $text);
+            $tmp = mb_strtolower(trim($text, '-'));
 
-            $tmp = trim($tmp, '-');
+            $replaces = [
+                '/[^\w\- ]+/u' => '',
+                '/\s/u' => '=',
+                '/\-+$/u' => '',
+            ];
 
-            $tmp = preg_replace('~-+~', '-', $tmp);
-
-            $tmp = mb_strtolower($tmp);
+            foreach ($replaces as $pattern => $replacement) {
+                $tmp = preg_replace($pattern, $replacement, $tmp);
+            }
 
             if (empty($tmp)) {
                 $tmp = 'n-a';
