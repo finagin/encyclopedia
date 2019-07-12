@@ -1,0 +1,30 @@
+{
+    "name": "finagin/encyclopedia",
+    "description": "Useful stuff",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Igor Finagin",
+            "email": "Igor@Finag.in"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "symfony/config": "^4.3",
+        "symfony/console": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
