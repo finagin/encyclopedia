@@ -35,6 +35,8 @@
     - [Database dump (PostgreSQL)](#database-dump-postgresql)
     - [Запись в БД из файла (PostgreSQL)](#%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C-%D0%B2-%D0%B1%D0%B4-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0-postgresql)
     - [Получение ссылок на поле таблицы (PostgreSQL)](#%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA-%D0%BD%D0%B0-%D0%BF%D0%BE%D0%BB%D0%B5-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B-postgresql)
+    - [Поиск залоченных процессов](#%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%B7%D0%B0%D0%BB%D0%BE%D1%87%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2)
+    - [Убийство процесса по pid](#%D1%83%D0%B1%D0%B8%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0-%D0%BF%D0%BE-pid)
 - [Python](#python)
   - [Virtualenv](#virtualenv)
     - [Install virtualenv](#install-virtualenv)
@@ -383,7 +385,7 @@ mysql -u {username} -p {database_name} < {inputfile}
 ```bash
 psql postgres
 ```
-```sql
+```postgresql
 CREATE DATABASE {db_name};
 CREATE USER {user_name} WITH password '{password}';
 GRANT ALL ON DATABASE {db_name} TO {user_name};
@@ -409,7 +411,7 @@ psql -U {username} {database_name} < {inputfile}
 <details>
   <summary>SQL</summary>
   
-  ```SQL
+  ```postgresql
   SELECT
     tc.table_name
     , kcu.column_name
@@ -437,6 +439,22 @@ psql -U {username} {database_name} < {inputfile}
   ;
   ```
 </details>
+
+[Back to top](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4)
+***
+#### Поиск залоченных процессов
+```postgresql
+SELECT pgsa.pid, pgsa.*
+FROM pg_stat_activity AS pgsa
+WHERE pgsa.wait_event_type = 'Lock';
+```
+
+[Back to top](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4)
+***
+#### Убийство процесса по pid
+```postgresql
+SELECT pg_terminate_backend(pid);
+```
 
 [Back to top](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4)
 ***
