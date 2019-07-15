@@ -106,29 +106,20 @@ class BuildCommand extends Command
         }
     }
 
-    protected function slugify($text)
-    {
-        if (!array_key_exists($text, $this->slugifyCache)) {
-            $tmp = mb_strtolower(trim($text));
+    protected function slugify($value = '') {
+        $value = mb_strtolower($value);
 
-            $replaces = [
-                '/[^\w\- ]+/' => ' ',
-                '/\s+/' => '-',
-                '/\-+$/' => '',
-            ];
+        $replaces = [
+            '/ /' => '-',
+            '/%([abcdef]|\d){2,2}/' => '',
+            '/[\/?!:\[\]`.,()*"\';{}+=<>~$|#@&]/' => '',
+            '/[。？！，、；：“”【】（）〔〕［］﹃﹄“ ”‘’﹁﹂—…－～《》〈〉「」]/' => '',
+        ];
 
-            foreach ($replaces as $pattern => $replacement) {
-                $tmp = preg_replace($pattern, $replacement, $tmp);
-            }
-
-            if (empty($tmp)) {
-                $tmp = 'n-a';
-            }
-
-            $this->slugifyCache[$text] = urlencode($tmp);
+        foreach ($replaces as $pattern => $replacement) {
+            $value = preg_replace($pattern, $replacement, $value);
         }
-
-        return $this->slugifyCache[$text];
+        return urlencode($value);
     }
 
     protected function makeHeader(): void

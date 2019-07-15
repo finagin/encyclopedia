@@ -1,58 +1,58 @@
 # Список полезных команд
 - [Linux](#linux)
-  - [Вывод версии дистрибутива](#n-a)
-  - [Дерево процессов](#n-a)
-  - [Поиск процесса занимающего порт](#n-a)
-  - [Фоновый процесс](#n-a)
-  - [Работа с фоновыми процессами](#n-a)
-    - [Ctrl + Z - приостановить и свернуть задачу](#ctrl-z)
-  - [Добавление для ${USERNAME} возможности вызывать sudo](#-username-sudo)
-  - [Смена владельца на user2 у файлов с владельцем user1](#-user2-user1)
-  - [Смена группы на user2 у файлов с группой user1](#-user2-user1)
-  - [Утилита поиска DNS](#-dns)
-  - [Порты](#n-a)
-    - [Проверка](#n-a)
-    - [Открытие](#n-a)
-  - [Стандартная HTTP авторизация](#-http)
+  - [Вывод версии дистрибутива](#%D0%B2%D1%D0%B2%D0%BE%D0%B4-%D0%B2%D0%B5%D1%D1%D0%B8%D0%B8-%D0%B4%D0%B8%D1%D1%D1%D0%B8%D0%B1%D1%D1%D0%B8%D0%B2%D0%B0)
+  - [Дерево процессов](#%D0%B4%D0%B5%D1%D0%B5%D0%B2%D0%BE-%D0%BF%D1%D0%BE%D1%86%D0%B5%D1%D1%D0%BE%D0%B2)
+  - [Поиск процесса занимающего порт](#%D0%BF%D0%BE%D0%B8%D1%D0%BA-%D0%BF%D1%D0%BE%D1%86%D0%B5%D1%D1%D0%B0-%D0%B7%D0%B0%D0%D0%B8%D0%D0%B0%D1%8E%D1%D0%B5%D0%B3%D0%BE-%D0%BF%D0%BE%D1%D1)
+  - [Фоновый процесс](#%D1%D0%BE%D0%D0%BE%D0%B2%D1%D0-%D0%BF%D1%D0%BE%D1%86%D0%B5%D1%D1)
+  - [Работа с фоновыми процессами](#%D1%D0%B0%D0%B1%D0%BE%D1%D0%B0-%D1-%D1%D0%BE%D0%D0%BE%D0%B2%D1%D0%D0%B8-%D0%BF%D1%D0%BE%D1%86%D0%B5%D1%D1%D0%B0%D0%D0%B8)
+    - [Ctrl + Z - приостановить и свернуть задачу](#ctrl--z---%D0%BF%D1%D0%B8%D0%BE%D1%D1%D0%B0%D0%D0%BE%D0%B2%D0%B8%D1%D1-%D0%B8-%D1%D0%B2%D0%B5%D1%D0%D1%D1%D1-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D1)
+  - [Добавление для ${USERNAME} возможности вызывать sudo](#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%D0%B5%D0%D0%B8%D0%B5-%D0%B4%D0%D1%8F-username-%D0%B2%D0%BE%D0%B7%D0%D0%BE%D0%B6%D0%D0%BE%D1%D1%D0%B8-%D0%B2%D1%D0%B7%D1%D0%B2%D0%B0%D1%D1-sudo)
+  - [Смена владельца на user2 у файлов с владельцем user1](#%D1%D0%D0%B5%D0%D0%B0-%D0%B2%D0%D0%B0%D0%B4%D0%B5%D0%D1%D1%86%D0%B0-%D0%D0%B0-user2-%D1-%D1%D0%B0%D0%D0%D0%BE%D0%B2-%D1-%D0%B2%D0%D0%B0%D0%B4%D0%B5%D0%D1%D1%86%D0%B5%D0-user1)
+  - [Смена группы на user2 у файлов с группой user1](#%D1%D0%D0%B5%D0%D0%B0-%D0%B3%D1%D1%D0%BF%D0%BF%D1-%D0%D0%B0-user2-%D1-%D1%D0%B0%D0%D0%D0%BE%D0%B2-%D1-%D0%B3%D1%D1%D0%BF%D0%BF%D0%BE%D0-user1)
+  - [Утилита поиска DNS](#%D1%D1%D0%B8%D0%D0%B8%D1%D0%B0-%D0%BF%D0%BE%D0%B8%D1%D0%BA%D0%B0-dns)
+  - [Порты](#%D0%BF%D0%BE%D1%D1%D1)
+    - [Проверка](#%D0%BF%D1%D0%BE%D0%B2%D0%B5%D1%D0%BA%D0%B0)
+    - [Открытие](#%D0%BE%D1%D0%BA%D1%D1%D1%D0%B8%D0%B5)
+  - [Стандартная HTTP авторизация](#%D1%D1%D0%B0%D0%D0%B4%D0%B0%D1%D1%D0%D0%B0%D1%8F-http-%D0%B0%D0%B2%D1%D0%BE%D1%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F)
 - [Vim](#vim)
-  - [Runtime команды](#runtime)
-  - [Конфигурационный файл Vim](#-vim)
+  - [Runtime команды](#runtime-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4%D1)
+  - [Конфигурационный файл Vim](#%D0%BA%D0%BE%D0%D1%D0%B8%D0%B3%D1%D1%D0%B0%D1%86%D0%B8%D0%BE%D0%D0%D1%D0-%D1%D0%B0%D0%D0-vim)
 - [SSH](#ssh)
-  - [Генерация SSH ключей](#-ssh)
-  - [Конфигурационный файл SSH](#-ssh)
-  - [SSH туннель](#ssh)
+  - [Генерация SSH ключей](#%D0%B3%D0%B5%D0%D0%B5%D1%D0%B0%D1%86%D0%B8%D1%8F-ssh-%D0%BA%D0%D1%8E%D1%87%D0%B5%D0)
+  - [Конфигурационный файл SSH](#%D0%BA%D0%BE%D0%D1%D0%B8%D0%B3%D1%D1%D0%B0%D1%86%D0%B8%D0%BE%D0%D0%D1%D0-%D1%D0%B0%D0%D0-ssh)
+  - [SSH туннель](#ssh-%D1%D1%D0%D0%D0%B5%D0%D1)
 - [macOS X](#macos-x)
   - [Mac OS Programms](#mac-os-programms)
   - [Dock separator](#dock-separator)
 - [Nginx](#nginx)
-  - [Прокидка ссылок на файлы со staging'а на production](#-staging-production)
+  - [Прокидка ссылок на файлы со staging'а на production](#%D0%BF%D1%D0%BE%D0%BA%D0%B8%D0%B4%D0%BA%D0%B0-%D1%D1%D1%D0%D0%BE%D0%BA-%D0%D0%B0-%D1%D0%B0%D0%D0%D1-%D1%D0%BE-staging%D0%B0-%D0%D0%B0-production)
 - [Database](#database)
   - [MySQL](#mysql)
     - [Database dump (MySQL)](#database-dump-mysql)
-    - [Запись в БД из файла (MySQL)](#-mysql)
+    - [Запись в БД из файла (MySQL)](#%D0%B7%D0%B0%D0%BF%D0%B8%D1%D1-%D0%B2-%D0%B1%D0%B4-%D0%B8%D0%B7-%D1%D0%B0%D0%D0%D0%B0-mysql)
   - [PostgreSQL](#postgresql)
-    - [Создание БД](#n-a)
+    - [Создание БД](#%D1%D0%BE%D0%B7%D0%B4%D0%B0%D0%D0%B8%D0%B5-%D0%B1%D0%B4)
     - [Database dump (PostgreSQL)](#database-dump-postgresql)
-    - [Запись в БД из файла (PostgreSQL)](#-postgresql)
-    - [Получение ссылок на поле таблицы (PostgreSQL)](#-postgresql)
+    - [Запись в БД из файла (PostgreSQL)](#%D0%B7%D0%B0%D0%BF%D0%B8%D1%D1-%D0%B2-%D0%B1%D0%B4-%D0%B8%D0%B7-%D1%D0%B0%D0%D0%D0%B0-postgresql)
+    - [Получение ссылок на поле таблицы (PostgreSQL)](#%D0%BF%D0%BE%D0%D1%D1%87%D0%B5%D0%D0%B8%D0%B5-%D1%D1%D1%D0%D0%BE%D0%BA-%D0%D0%B0-%D0%BF%D0%BE%D0%D0%B5-%D1%D0%B0%D0%B1%D0%D0%B8%D1%86%D1-postgresql)
 - [Python](#python)
   - [Virtualenv](#virtualenv)
     - [Install virtualenv](#install-virtualenv)
     - [Create virtualenv](#create-virtualenv)
     - [Activate virtualenv](#activate-virtualenv)
 - [Git](#git)
-  - [Создание алиаса для вывода дерева коммитов](#n-a)
-  - [Удаление игнорируемых файлов](#n-a)
-  - [Откат изменений в удаленном хранилище](#n-a)
-  - [Patch из нескольких коммитов](#patch)
-  - [Переименование ветки](#n-a)
-  - [Удаление ветки](#n-a)
-  - [Переименование тега](#n-a)
-  - [Клонирование ветки](#n-a)
-  - [Клонирование сабмодулей](#n-a)
-  - [Удаление из индекса](#n-a)
-  - [Подделка даты коммита](#n-a)
-  - [Перезапись "Initial commit"](#-initial-commit)
+  - [Создание алиаса для вывода дерева коммитов](#%D1%D0%BE%D0%B7%D0%B4%D0%B0%D0%D0%B8%D0%B5-%D0%B0%D0%D0%B8%D0%B0%D1%D0%B0-%D0%B4%D0%D1%8F-%D0%B2%D1%D0%B2%D0%BE%D0%B4%D0%B0-%D0%B4%D0%B5%D1%D0%B5%D0%B2%D0%B0-%D0%BA%D0%BE%D0%D0%D0%B8%D1%D0%BE%D0%B2)
+  - [Удаление игнорируемых файлов](#%D1%D0%B4%D0%B0%D0%D0%B5%D0%D0%B8%D0%B5-%D0%B8%D0%B3%D0%D0%BE%D1%D0%B8%D1%D1%D0%B5%D0%D1%D1%85-%D1%D0%B0%D0%D0%D0%BE%D0%B2)
+  - [Откат изменений в удаленном хранилище](#%D0%BE%D1%D0%BA%D0%B0%D1-%D0%B8%D0%B7%D0%D0%B5%D0%D0%B5%D0%D0%B8%D0-%D0%B2-%D1%D0%B4%D0%B0%D0%D0%B5%D0%D0%D0%BE%D0-%D1%85%D1%D0%B0%D0%D0%B8%D0%D0%B8%D1%D0%B5)
+  - [Patch из нескольких коммитов](#patch-%D0%B8%D0%B7-%D0%D0%B5%D1%D0%BA%D0%BE%D0%D1%D0%BA%D0%B8%D1%85-%D0%BA%D0%BE%D0%D0%D0%B8%D1%D0%BE%D0%B2)
+  - [Переименование ветки](#%D0%BF%D0%B5%D1%D0%B5%D0%B8%D0%D0%B5%D0%D0%BE%D0%B2%D0%B0%D0%D0%B8%D0%B5-%D0%B2%D0%B5%D1%D0%BA%D0%B8)
+  - [Удаление ветки](#%D1%D0%B4%D0%B0%D0%D0%B5%D0%D0%B8%D0%B5-%D0%B2%D0%B5%D1%D0%BA%D0%B8)
+  - [Переименование тега](#%D0%BF%D0%B5%D1%D0%B5%D0%B8%D0%D0%B5%D0%D0%BE%D0%B2%D0%B0%D0%D0%B8%D0%B5-%D1%D0%B5%D0%B3%D0%B0)
+  - [Клонирование ветки](#%D0%BA%D0%D0%BE%D0%D0%B8%D1%D0%BE%D0%B2%D0%B0%D0%D0%B8%D0%B5-%D0%B2%D0%B5%D1%D0%BA%D0%B8)
+  - [Клонирование сабмодулей](#%D0%BA%D0%D0%BE%D0%D0%B8%D1%D0%BE%D0%B2%D0%B0%D0%D0%B8%D0%B5-%D1%D0%B0%D0%B1%D0%D0%BE%D0%B4%D1%D0%D0%B5%D0)
+  - [Удаление из индекса](#%D1%D0%B4%D0%B0%D0%D0%B5%D0%D0%B8%D0%B5-%D0%B8%D0%B7-%D0%B8%D0%D0%B4%D0%B5%D0%BA%D1%D0%B0)
+  - [Подделка даты коммита](#%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D0%D0%BA%D0%B0-%D0%B4%D0%B0%D1%D1-%D0%BA%D0%BE%D0%D0%D0%B8%D1%D0%B0)
+  - [Перезапись "Initial commit"](#%D0%BF%D0%B5%D1%D0%B5%D0%B7%D0%B0%D0%BF%D0%B8%D1%D1-initial-commit)
   - [Git Flow](#git-flow)
 
 
@@ -63,28 +63,28 @@
 lsb_release -a
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Дерево процессов
 ```bash
 ps -e -o pid,args --forest
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Поиск процесса занимающего порт
 ```bash
 netstat -vanp tcp | grep 8000
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Фоновый процесс
 ```bash
 {command} > {process_log_file | /dev/null} 2>&1 &
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Работа с фоновыми процессами
 #### Ctrl + Z - приостановить и свернуть задачу
@@ -101,35 +101,35 @@ fg {group}
 bg {group}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Добавление для ${USERNAME} возможности вызывать sudo
 ```bash
 sudo usermod -a -G sudo ${USERNAME}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Смена владельца на user2 у файлов с владельцем user1
 ```bash
 find ./ -user user1 -exec chown user2 {} +
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Смена группы на user2 у файлов с группой user1
 ```bash
 find ./ -group group1 -exec chown :group2 {} +
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Утилита поиска DNS
 ```bash
 dig {domain} [any | A | MX | TXT | NS | SOA]
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Порты
 
@@ -142,14 +142,14 @@ ss -nap | grep :{port}
 lsof -n -i:{port} | grep LISTEN
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Открытие
 ```bash
 iptables -I INPUT -p tcp -m tcp --dport 53 -j ACCEPT
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Стандартная HTTP авторизация
 ```bash
@@ -160,7 +160,7 @@ e.g.
 htpasswd -c .htpasswd finagin
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## Vim
 
@@ -174,7 +174,7 @@ htpasswd -c .htpasswd finagin
 :e ++enc=cp1251
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Конфигурационный файл Vim
 <details>
@@ -249,7 +249,7 @@ set showcmd
 ```
 </details>
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## SSH
 
@@ -262,7 +262,7 @@ e.g.
 ssh-keygen -t rsa -b 16384 -C "baby@ovh.ft-ru.ru" -f ~/.ssh/baby
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Конфигурационный файл SSH
 <details>
@@ -312,7 +312,7 @@ Host application-database
 ```
 </details>
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### SSH туннель
 ```bash
@@ -321,14 +321,14 @@ ssh -L 8080:localhost:80 192.168.0.10
 
 [more information ↑](https://habr.com/post/331348/)
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## macOS X
 
 ### Mac OS Programms
 * [Etcher](https://etcher.io) by [resin.io](https://resin.io) -- создаени загрузочной USB
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Dock separator
 ```bash
@@ -336,7 +336,7 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 killall Dock;
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## Nginx
 
@@ -353,7 +353,7 @@ server {
 }
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## Database
 
@@ -368,14 +368,14 @@ e.g.
 mysqldump -u utalents-test -p utalents-test > "utalents-test_(date +"%Y-%m-%d_%H-%M-%S").sql"
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Запись в БД из файла (MySQL)
 ```bash
 mysql -u {username} -p {database_name} < {inputfile}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### PostgreSQL
 
@@ -389,21 +389,21 @@ CREATE USER {user_name} WITH password '{password}';
 GRANT ALL ON DATABASE {db_name} TO {user_name};
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Database dump (PostgreSQL)
 ```bash
 pg_dump -U {username} {database_name} > {outputfile}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Запись в БД из файла (PostgreSQL)
 ```bash
 psql -U {username} {database_name} < {inputfile}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Получение ссылок на поле таблицы (PostgreSQL)
 <details>
@@ -438,7 +438,7 @@ psql -U {username} {database_name} < {inputfile}
   ```
 </details>
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## Python
 
@@ -449,21 +449,21 @@ psql -U {username} {database_name} < {inputfile}
 sudo pip install virtualenv
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Create virtualenv
 ```bash
 virtualenv --no-site-packages --prompt="({project_name})" {venv_name}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 #### Activate virtualenv
 ```bash
 source {path_to_project}/{venv_name}/bin/activate
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ## Git
 
@@ -476,14 +476,14 @@ git config --global alias.tree "log --oneline --decorate --all --graph"
 git tree
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Удаление игнорируемых файлов
 ```bash
 git clean -Xdfe .idea # -e .idea — игнорировать папку .idea
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Откат изменений в удаленном хранилище
 ```bash
@@ -491,7 +491,7 @@ git reset --hard {commit}
 git push --force
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Patch из нескольких коммитов
 ```bash
@@ -506,7 +506,7 @@ or
 git diff bea1ccb..b028577 > my-patch.patch
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Переименование ветки
 ```bash
@@ -515,7 +515,7 @@ git push origin :{old_branch}                   # Delete the old branch
 git push --set-upstream origin {new_branch}     # Push the new branch, set local branch to track the new remote
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Удаление ветки
 ```bash
@@ -523,7 +523,7 @@ git push origin --delete {branch_name}      # Remove branch remotely
 git branch -d {branch_name}                 # Remove branch locally
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Переименование тега
 ```bash
@@ -533,7 +533,7 @@ git push origin :refs/tags/{old_tag}        # Remove tag remotely
 git push --tags                             # Push new tag remotely
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Клонирование ветки
 ```bash
@@ -541,7 +541,7 @@ git clone -b '{branch}' --single-branch {repo} {dir}
 git clone -b 'v1.2.1' --single-branch --depth 1 https://github.com/finagin/Gulpfile.js.git v1.2.1
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Клонирование сабмодулей
 В версии 1.9 и выше вы можете клонировать репозиторий и несколько сабмодулей паралельно:
@@ -559,7 +559,7 @@ cd bar
 git submodule update --init --recursive
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Удаление из индекса
 Удаление файла
@@ -571,7 +571,7 @@ git rm --cached {file_name}
 git rm --cached -r {directory_name}
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Подделка даты коммита
 ```bash
@@ -583,17 +583,17 @@ git filter-branch --env-filter \
      fi'
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Перезапись "Initial commit"
 ```bash
 git update-ref -d HEAD
 ```
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
 ### Git Flow
 [git-flow ↑](//danielkummer.github.io/git-flow-cheatsheet/index.ru_RU.html)
 
-[Back to top](#n-a)
+[Back to top](#%D1%D0%BF%D0%B8%D1%D0%BE%D0%BA-%D0%BF%D0%BE%D0%D0%B5%D0%B7%D0%D1%D1%85-%D0%BA%D0%BE%D0%D0%B0%D0%D0%B4)
 ***
