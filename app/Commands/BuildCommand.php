@@ -2,6 +2,7 @@
 
 namespace App\Commands;
 
+use App\StringHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -101,7 +102,7 @@ class BuildCommand extends Command
                 if (preg_match('/>\s*$/', $this->data) !== false) {
                     $this->data .= "\n";
                 }
-                $this->data .= '[Back to top](#'.$this->slugify($this->title).")\n***";
+                $this->data .= '[Back to top](#'.StringHelper::slugify($this->title).")\n***";
             }
         }
     }
@@ -132,7 +133,7 @@ class BuildCommand extends Command
         foreach ($matches as $item) {
             $header .=
                 str_repeat('  ', strlen($item[1]) - 2).
-                '- ['.$item[2].'](#'.$this->slugify($item[2]).")\n";
+                '- ['.$item[2].'](#'.StringHelper::slugify($item[2], true).")\n";
         }
 
         $this->data = implode("\n", [
