@@ -86,7 +86,7 @@ class BuildCommand extends Command
         );
     }
 
-    protected function build($path)
+    protected function build($path): void
     {
         foreach (glob($path.'/*.md') as $file) {
             if ($this->isDebug) {
@@ -106,19 +106,21 @@ class BuildCommand extends Command
         }
     }
 
-    protected function slugify($value = '') {
+    protected function slugify($value = ''): string
+    {
         $value = mb_strtolower($value);
 
         $replaces = [
             '/ /' => '-',
             '/%([abcdef]|\d){2,2}/' => '',
-            '/[\/?!:\[\]`.,()*"\';{}+=<>~$|#@&]/' => '',
-            '/[。？！，、；：“”【】（）〔〕［］﹃﹄“ ”‘’﹁﹂—…－～《》〈〉「」]/' => '',
+            '/[\/?!:\[\]`.,()*"\';{}+=<>~$|#@&–—]/u' => '',
+            '/[。？！，、；：“”【】（）〔〕［］﹃﹄“ ”‘’﹁﹂—…－～《》〈〉「」]/u' => '',
         ];
 
         foreach ($replaces as $pattern => $replacement) {
             $value = preg_replace($pattern, $replacement, $value);
         }
+
         return urlencode($value);
     }
 
