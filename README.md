@@ -21,6 +21,7 @@
   - [Генерация SSH ключей](#%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F-ssh-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9)
   - [Конфигурационный файл SSH](#%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9-%D1%84%D0%B0%D0%B9%D0%BB-ssh)
   - [SSH туннель](#ssh-%D1%82%D1%83%D0%BD%D0%BD%D0%B5%D0%BB%D1%8C)
+  - [Easy SOCKS Proxy](#easy-socks-proxy)
 - [macOS X](#macos-x)
   - [Mac OS Programms](#mac-os-programms)
   - [Dock separator](#dock-separator)
@@ -323,6 +324,14 @@ ssh -L 8080:localhost:80 192.168.0.10
 ```
 
 [more information ↑](https://habr.com/post/331348/)
+
+[Back to top](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4)
+***
+### Easy SOCKS Proxy
+```bash
+ssh -D 12345 {user}@{host}
+```
+![Network Settings](files/030/040.png)
 
 [Back to top](#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4)
 ***
